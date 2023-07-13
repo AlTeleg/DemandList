@@ -1,4 +1,7 @@
-export default function Listing({ items=[] }) {
+import { ListProps } from "../ts/ListProps"
+import * as React from 'react'
+
+export default function Listing({ items = [] } : ListProps) {
   return (
         <div className="item-list">
             {items.filter(item => item.state === 'active').map((item, id) => 
@@ -29,3 +32,6 @@ export default function Listing({ items=[] }) {
         </div>
   )
 }
+
+
+
