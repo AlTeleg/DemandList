@@ -14,17 +14,15 @@ export default function Listing({ items=[] }) {
                             <p className="item-price">{item.price}{item.currency_code === 'USD' ? '$' : '€'}</p> : 
                             <p className="item-price">{item.currency_code} {item.price}</p>
                         }
-
                         {item.quantity <= 10 ?
-                        <p className="item-quantity level-low">{item.quantity} left</p> : undefined
+                            <p className="item-quantity level-low">{item.quantity} left</p> : undefined
                         }
                         {item.quantity <= 20 && item.quantity >= 10 ?
-                        <p className="item-quantity level-medium">{item.quantity} left</p> : undefined
+                            <p className="item-quantity level-medium">{item.quantity} left</p> : undefined
                         }
                         {item.quantity > 20 ?
-                        <p className="item-quantity level-high">{item.quantity} left</p> : undefined
-                        }
-                        
+                            <p className="item-quantity level-high">{item.quantity} left</p> : undefined
+                        }    
                     </div> 
                 </div>
             )}
